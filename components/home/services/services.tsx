@@ -1,79 +1,72 @@
-import { Grid, Box, Text, Flex, Center } from "@chakra-ui/react";
-
-import { useState } from "react";
-import AddOnCard from "./services-card";
+import { Grid, Box, Heading, Text, Flex, Center } from "@chakra-ui/react";
+import ProductCard from "./product-card";
 
 const data = [
   {
-    name: "Laporan Keuangan Internal",
-    image: "/assets/lp/add-on/Addons-06.jpg",
+    image: "#",
+    title: "UI Design",
     description:
-      "Kamu dapat memperoleh laporan harian setiap pemasukan dan pengeluaran",
+      "We create visually appealing and intuitive designs that reflect your brand and deliver a seamless user experience",
   },
   {
-    name: "Downline",
-    image: "/assets/lp/add-on/Addons-05.jpg",
+    image: "#",
+    title: "HTML/CSS Development",
     description:
-      "Promosikan aplikasi dengan lebih mudah menggunakan fitur downline",
+      "We convert design mockups into responsive web pages, ensuring cross-browser compatibility and adherence to web standards",
   },
   {
-    name: "Transfer Saldo Antar Member",
-    image: "/assets/lp/add-on/Addons-03.jpg",
-    description: "Rasakan kemudahan dalam melakukan transfer antar member ",
+    image: "#",
+    title: "JavaScript Development",
+    description:
+      "Our developers bring interactivity and dynamic functionality to your website using JavaScript and popular frameworks like React (Next.js)",
   },
   {
-    name: "Notifikasi Aplikasi",
-    image: "/assets/lp/add-on/Addons-02.jpg",
+    image: "#",
+    title: "Responsive Web Design",
     description:
-      "Nyalakan notifikasi aplikasimu agar tidak kehilangan informasi",
+      "We ensure your website adapts seamlessly to different devices, providing optimal user experiences",
   },
   {
-    name: "Produk Manual & Voucher",
-    image: "/assets/lp/add-on/Addons-09.jpg",
+    image: "#",
+    title: "Performance Optimization",
     description:
-      "Kamu dapat memperoleh laporan harian setiap pemasukan dan pengeluaran",
+      "We optimize your website's performance to deliver fast-loading web pages and improve user satisfaction",
   },
   {
-    name: "Print Struk Bluetooth",
-    image: "/assets/lp/add-on/Addons-01.jpg",
+    image: "#",
+    title: "Integration of Third-Party Services",
     description:
-      "Catat setiap bukti transaksi dengan print struk lewat bluetooth",
+      "We seamlessly integrate third-party services and APIs to enhance your website's functionality",
   },
   {
-    name: "Multi Vendor",
-    image: "/assets/lp/add-on/Addons-11.jpg",
+    image: "#",
+    title: "Website Maintenance and Support",
     description:
-      "Aktifkan add-on multivendor untuk memilih beragam tempat suplier produk",
+      "We provide ongoing maintenance and support to keep your website up-to-date and optimized",
   },
   {
-    name: "OTP Sender",
-    image: "/assets/lp/add-on/Addons-07.jpg",
+    image: "#",
+    title: "Collaboration",
     description:
-      "Kirim kode verifikasi kini semakin mudah lewat OTP sender WhatsApp dan SMS",
+      "We work closely with designers and back-end developers to ensure a cohesive development process",
   },
 ];
 
-const Product = () => {
+const Services = () => {
   return (
-    <Center>
-      <Box maxW={"1440px"}>
-        <Grid
-          mb={"127px"}
-          templateColumns={{
-            base: "1fr",
-            xl: "repeat(3, 1fr)",
-            "2xl": "repeat(4, 1fr)",
-          }}
-          gap={{ base: "16px", md: "31px" }}
-          p={4}
-        >
-          {data.map((item, index) => (
-            <AddOnCard data={item} key={index} />
-          ))}
-        </Grid>
-      </Box>
-    </Center>
+    <Grid
+      mb={"127px"}
+      templateColumns={{
+        base: "1fr 1fr",
+      }}
+      gap={{ base: "16px", md: "31px" }}
+      p={4}
+    >
+      {data.map((item, index) => (
+        <ProductCard data={item} key={index} />
+      ))}
+    </Grid>
   );
 };
 
-export default Product;
+export default Services;

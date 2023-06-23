@@ -1,4 +1,4 @@
-import { Grid, Box, Heading, Text, Flex, Center } from "@chakra-ui/react";
+import { Grid, Box, Text, Flex, Center } from "@chakra-ui/react";
 
 import { useState } from "react";
 import ProductCard from "./product-card";

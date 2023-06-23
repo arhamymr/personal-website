@@ -4,12 +4,11 @@ import Image from "next/image";
 export default function CardBenefit({ data }) {
   return (
     <Card
-      maxW={"215px"}
+      w={"full"}
       minH={"223px"}
       p={"12px 14px"}
       rounded={"15px"}
       boxShadow={"0px 5px 20px 5px #C7C7C740"}
-      mb={{ base: 0, md: "49px" }}
     >
       <Image
         quality={100}
@@ -22,12 +21,12 @@ export default function CardBenefit({ data }) {
       <Text
         mt={"21px"}
         textAlign={"center"}
-        mb={"22px"}
+        mb={"12px"}
         fontSize={{ base: "16px", md: "20px" }}
       >
         {data.title}
       </Text>
-      <Text mt={"21px"} textAlign={"center"} mb={"22px"}>
+      <Text textAlign={"center"} mb={"22px"}>
         {data.description}
       </Text>
     </Card>
