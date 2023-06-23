@@ -1,7 +1,7 @@
 import { Grid, Box, Text, Flex, Center } from "@chakra-ui/react";
 
 import { useState } from "react";
-import AddOnCard from "./add-on-card";
+import AddOnCard from "./services-card";
 
 const data = [
   {
@@ -53,7 +53,7 @@ const data = [
   },
 ];
 
-const RenderProduct = () => {
+const Product = () => {
   return (
     <Center>
       <Box maxW={"1440px"}>
@@ -73,48 +73,6 @@ const RenderProduct = () => {
         </Grid>
       </Box>
     </Center>
-  );
-};
-
-const Product = () => {
-  const [active, setActive] = useState(0);
-  const menu = [
-    "Semua",
-    "Koperasi",
-    "Travel",
-    "HRIS",
-    "Pendidikan",
-    "Organisasi",
-  ];
-
-  const enableList = (menu) => {
-    if (menu === "Semua") {
-      return true;
-    }
-    return false;
-  };
-
-  return (
-    <Box>
-      <Center w={"100vw"} pt={"46px"} pb={"30px"}>
-        <Flex gap={"69px"} overflowX={"auto"} whiteSpace={"nowrap"}>
-          {menu.map((item, index) => (
-            <Text
-              p={"8px 16px"}
-              rounded={"40px"}
-              fontWeight={active === index && "bold"}
-              key={item}
-              opacity={enableList(item) ? "1" : "0.5"}
-              cursor={!enableList(item) ? "not-allowed" : "pointer"}
-              onClick={() => enableList(item) && setActive(index)}
-            >
-              {item}
-            </Text>
-          ))}
-        </Flex>
-      </Center>
-      <RenderProduct />
-    </Box>
   );
 };
 

@@ -43,25 +43,12 @@ function SmoothScrollLink({ targetId, label, children }: ISmootProps) {
           className={targetId}
           fontSize={"sm"}
           ref={linkRef}
-          fontWeight={500}
+          fontWeight={700}
           onClick={() => handleClick(targetId)}
-          color={
-            label === "Affiliate Program" || label === "Template"
-              ? "gray.300"
-              : "gray.500"
-          }
           whiteSpace={"nowrap"}
-          cursor={
-            label === "Affiliate Program" || label === "Template"
-              ? "not-allowed"
-              : "pointer"
-          }
+          cursor={"pointer"}
           _hover={{
-            textDecoration: "none",
-            color:
-              label === "Affiliate Program" || label === "Template"
-                ? "gray.300"
-                : "black",
+            color: "brand.500",
           }}
         >
           {label}

@@ -3,115 +3,58 @@ import { Grid, Box, Heading, Text, Flex, Center } from "@chakra-ui/react";
 import { useState } from "react";
 import ProductCard from "./product-card";
 
-const data = {
-  pascabayar: [
-    {
-      name: "PLN Pascabayar",
-      image: "/assets/lp/product/p-prod-1.png",
-    },
-    {
-      name: "Pulsa Pascabayar",
-      image: "/assets/lp/product/p-prod-2.png",
-    },
-    {
-      name: "TELKOM",
-      image: "/assets/lp/product/p-prod-3.png",
-    },
-    {
-      name: "BPJS",
-      image: "/assets/lp/product/p-prod-4.png",
-    },
-    {
-      name: "PDAM",
-      image: "/assets/lp/product/p-prod-5.png",
-    },
-    {
-      name: "PGN",
-      image: "/assets/lp/product/p-prod-6.png",
-    },
-    {
-      name: "TV Pascabayar",
-      image: "/assets/lp/product/p-prod-7.png",
-    },
-  ],
-  prabayar: [
-    {
-      name: "Pulsa Isi Ulang",
-      image: "/assets/lp/product/prod-1.png",
-    },
-    {
-      name: "Pulsa Transfer",
-      image: "/assets/lp/product/prod-2.png",
-    },
-    {
-      name: "Pulsa Internasional",
-      image: "/assets/lp/product/prod-3.png",
-    },
-    {
-      name: "Paket Data",
-      image: "/assets/lp/product/prod-4.png",
-    },
-    {
-      name: "Paket Telepon",
-      image: "/assets/lp/product/prod-5.png",
-    },
-    {
-      name: "Paket SMS",
-      image: "/assets/lp/product/prod-6.png",
-    },
-    {
-      name: "Token Listrik",
-      image: "/assets/lp/product/prod-7.png",
-    },
-    {
-      name: "Voucher Game",
-      image: "/assets/lp/product/prod-8.png",
-    },
-    {
-      name: "E-Wallet",
-      image: "/assets/lp/product/prod-9.png",
-    },
-    {
-      name: "WIFI.ID",
-      image: "/assets/lp/product/prod-10.png",
-    },
-    {
-      name: "TV Kabel",
-      image: "/assets/lp/product/prod-11.png",
-    },
-    {
-      name: "Voucher Belanja",
-      image: "/assets/lp/product/prod-12.png",
-    },
-    {
-      name: "Voucher Makan",
-      image: "/assets/lp/product/prod-13.png",
-    },
-    {
-      name: "Voucher Digital",
-      image: "/assets/lp/product/prod-14.png",
-    },
-    {
-      name: "Masa Aktif",
-      image: "/assets/lp/product/prod-15.png",
-    },
-    {
-      name: "Token Pertagas",
-      image: "/assets/lp/product/prod-16.png",
-    },
-    {
-      name: "Unlock Voucher",
-      image: "/assets/lp/product/prod-17.png",
-    },
-    {
-      name: "Unlock Kartu Perdana",
-      image: "/assets/lp/product/prod-18.png",
-    },
-  ],
-};
+const data = [
+  {
+    image: "#",
+    title: "UI Design",
+    description:
+      "We create visually appealing and intuitive designs that reflect your brand and deliver a seamless user experience",
+  },
+  {
+    image: "#",
+    title: "HTML/CSS Development",
+    description:
+      "We convert design mockups into responsive web pages, ensuring cross-browser compatibility and adherence to web standards",
+  },
+  {
+    image: "#",
+    title: "JavaScript Development",
+    description:
+      "Our developers bring interactivity and dynamic functionality to your website using JavaScript and popular frameworks like React (Next.js)",
+  },
+  {
+    image: "#",
+    title: "Responsive Web Design",
+    description:
+      "We ensure your website adapts seamlessly to different devices, providing optimal user experiences",
+  },
+  {
+    image: "#",
+    title: "Performance Optimization",
+    description:
+      "We optimize your website's performance to deliver fast-loading web pages and improve user satisfaction",
+  },
+  {
+    image: "#",
+    title: "Integration of Third-Party Services",
+    description:
+      "We seamlessly integrate third-party services and APIs to enhance your website's functionality",
+  },
+  {
+    image: "#",
+    title: "Website Maintenance and Support",
+    description:
+      "We provide ongoing maintenance and support to keep your website up-to-date and optimized",
+  },
+  {
+    image: "#",
+    title: "Collaboration",
+    description:
+      "We work closely with designers and back-end developers to ensure a cohesive development process",
+  },
+];
 
 const RenderProduct = ({ type }) => {
-  const switchType = !type ? "prabayar" : "pascabayar";
   return (
     <Grid
       mb={"127px"}
@@ -123,7 +66,7 @@ const RenderProduct = ({ type }) => {
       gap={{ base: "16px", md: "31px" }}
       p={4}
     >
-      {data[switchType].map((item, index) => (
+      {data.map((item, index) => (
         <ProductCard data={item} key={index} />
       ))}
     </Grid>

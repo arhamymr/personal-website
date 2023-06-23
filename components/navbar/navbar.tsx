@@ -1,16 +1,15 @@
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Stack,
   Collapse,
-  Icon,
   Link,
+  Button,
   Container,
   useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ChatIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import SmoothScrollLink from "./smothlink";
 
@@ -19,26 +18,25 @@ export default function Navigation() {
 
   return (
     <Box
-      bg={"white"}
       zIndex={99}
       w={"full"}
       borderBottom={1}
       borderStyle={"solid"}
       borderColor={"gray.100"}
       position={"fixed"}
+      backdropFilter={"blur(50px)"}
     >
       <Box>
-        <Container maxW="1440px">
+        <Container>
           <Flex
             justify={"space-between"}
-            bg={"white"}
             minH={"60px"}
             py={{ base: 2 }}
             align={"center"}
           >
             <Link href={"#"}>
               <Image
-                src={"/assets/logo.png"}
+                src={"/assets/logo.svg"}
                 width={132}
                 height={28}
                 alt="logo"
@@ -80,12 +78,15 @@ export default function Navigation() {
 
 const DesktopNav = () => {
   return (
-    <Flex align={"center"} gap={"48px"}>
+    <Flex align={"center"} gap={"18px"}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <SmoothScrollLink targetId={navItem.href} label={navItem.label} />
         </Box>
       ))}
+      <Button leftIcon={<ChatIcon />} variant={"outline"}>
+        Hire Us
+      </Button>
     </Flex>
   );
 };
@@ -127,34 +128,15 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
-    href: "#hero",
+    label: "Products & Services",
+    href: "#products",
   },
   {
-    label: "Benefit",
-    href: "#benefit",
+    label: "Blogs",
+    href: "#blogs",
   },
   {
-    label: "Product",
-    href: "#product",
-  },
-  {
-    label: "Add-On",
-    href: "#add-on",
-  },
-  {
-    label: "Template",
-    href: "#template",
-  },
-  {
-    label: "Testimonial",
-    href: "#testimonial",
-  },
-  {
-    label: "FAQ",
-    href: "#faq",
-  },
-  {
-    label: "Affiliate Program",
+    label: "About Us",
+    href: "#about-us",
   },
 ];
