@@ -47,10 +47,10 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <NavbarContextProvider>
         <Head>
-          <title>Serpul.co.id</title>
+          <title>Sevenstack.dev</title>
           <meta
             name="description"
-            content="Nikmati manfaat dan kemudahan dalam membuat aplikasi sesuka hati dengan beragam fitur, add-on dan template yang kami sediakan"
+            content="Crafting Your Digital Presence"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>

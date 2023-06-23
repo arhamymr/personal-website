@@ -21,7 +21,7 @@ import SmoothScrollLink from "components/navbar/smothlink";
 const Logo = () => {
   return (
     <Image
-      src={"/assets/logo-white.png"}
+      src={"/assets/logo.svg"}
       alt={"logo"}
       width={133}
       height={28}
@@ -49,15 +49,13 @@ export default function Footer() {
             <Box>
               <Logo />
             </Box>
-            <Text fontSize={"sm"}>PT Serpul Teknologi Indonesia</Text>
+           
             <Text fontSize={"sm"}>
               Jln. Puri Asri Raya, Tamalanrea Indah, Kec. Tamalanrea, Kota
               Makassar, Sulawesi Selatan 90245.
             </Text>
             <Text fontSize={"sm"}>
-              © 2017 - {new Date().getFullYear()} | PT Serpul Teknologi
-              Indonesia <br />
-              by Yuscorp Ecosystem
+              © {new Date().getFullYear()} | Sevenstack 
             </Text>
           </Stack>
           <Stack align={"flex-start"}>
@@ -83,36 +81,19 @@ export default function Footer() {
               <WhatsappFillIcon />
               <a
                 href={
-                  "https://api.whatsapp.com/send/?phone=6281354444604&text&type=phone_number&app_absent=0"
-                }
+                  "#" }
                 target="_blank"
               >
-                +6281354444604
+                +6289669594959
               </a>
             </HStack>
             <HStack>
               <EmailIcon />
-              <a target="_blank" href={"mailto:serpul@yuscorp.co.id"}>
-                serpul@yuscorp.co.id
+              <a target="_blank" href={"mailto:arhamymr@gmail.com"}>
+                arhamymr@gmail.com
               </a>
             </HStack>
-            <HStack gap={"24px"}>
-              <a href={"https://www.instagram.com/serpulcoid/"} target="_blank">
-                <InstagramIcon />
-              </a>
-              <a href={"https://www.facebook.com/serpulcoid/"} target="_blank">
-                <FacebookIcon />
-              </a>
-              <a href={"https://t.me/sahabatserpul"} target="_blank">
-                <TelegramIcon />
-              </a>
-              <a
-                href={"https://www.linkedin.com/company/yuscorp"}
-                target="_blank"
-              >
-                <LinkedinIcon />
-              </a>
-            </HStack>
+           
           </Stack>
         </SimpleGrid>
       </Container>

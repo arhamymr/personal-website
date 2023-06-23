@@ -27,7 +27,7 @@ export default function Navigation() {
       backdropFilter={"blur(50px)"}
     >
       <Box>
-        <Container>
+        <Container maxW='container.lg'>
           <Flex
             justify={"space-between"}
             minH={"60px"}
