@@ -1,5 +1,5 @@
 import { Box, Center, Text } from "@chakra-ui/react";
-import FormRegister from "components/register/form-register";
+import FormRegister from "components/home/form-interest";
 import SplitScreen from "layouts/split-screen";
 import Logo from "./logo";
 

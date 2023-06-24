@@ -1,5 +1,5 @@
 import { Flex, Stack, Image } from "@chakra-ui/react";
-import Carousel from "components/register/form-register/carousel";
+import Carousel from "components/interest/form-interest/carousel";
 
 export default function SplitScreen({ children, isCarousel = false }) {
   return (
